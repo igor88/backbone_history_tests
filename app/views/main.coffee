@@ -64,7 +64,8 @@ define [
             json: JSON.stringify(results_to_save)
           success: @response
     goTest: () ->
-      console.log 'go test'
+      console.log 'go test', window.app
+      window.app.navigate "help/troubleshooting", {trigger: true, replace: false}
 
     response: (response) ->
       if response is "true"

@@ -64,60 +64,6 @@ require.config({
 
 require(['backbone', 'cs!app'], function(Backbone, App){
   console.log('REQUIRE')
-
-//  window.Router = Backbone.Router.extend({
-//routes: {
-//'p/:param1': 'product',
-//'!/products': 'products',
-//'!/profile': 'profile',
-//'!/admin': 'admin',
-//'search': 'search',
-//'': "main",
-//'*action': "dd"
-//},
-//main: function() {
-//  console.log('')
-//  console.log('main')
-//},
-//product: function(item) {
-//  console.log('prod', item)
-//},
-//dd: function() {
-//  console.log('dd')
-//},
-//admin: function() {
-//},
-//search: function() {
-//  console.log("search")
-//},
-//profile: function() {
-//}
-//});
-//window.router = new Router;
-//return Backbone.history.start({
-//    pushState: true
-//}
-
-//);
-
-
-
-
-
-
-    var AppRouter = Backbone.Router.extend({
-    routes: {
-      "posts/:id": "defaultRoute",
-      "*actions": "defaultRoute"
-    }
-    });
-    // Instantiate the router
-    var app_router = new AppRouter;
-    app_router.on('route:defaultRoute', function (actions) {
-        console.log("any action", actions );
-        app_router.navigate("help/troubleshooting", {trigger: true, replace: false});
-     });
-    // Start Backbone history a necessary step for bookmarkable URL's
   window.app = new App;
   Backbone.history.start({
 //    pushState: true,

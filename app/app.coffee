@@ -12,7 +12,14 @@ define [
 
     routes:
       '': 'index'
+      '*actions': 'action'
 
     index: ->
       @currentView = new MainView()
+
+    action: (param) ->
+      console.log 'any_action', param
+      @navigate "help/troubleshooting",
+        trigger: true
+        replace: false
 
