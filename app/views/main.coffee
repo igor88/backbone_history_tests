@@ -18,6 +18,7 @@ define [
 
     events:
       'change #input_image'       : 'loadFile'
+      'click #btn_test'           : 'goTest'
       'click #btn_skeleton'       : 'goDrawSkeleton'
       'click #btn_points'         : 'goDrawPoints'
       'click #btn_save'           : 'saveContour'
@@ -62,6 +63,8 @@ define [
             image_name: image_name
             json: JSON.stringify(results_to_save)
           success: @response
+    goTest: () ->
+      console.log 'go test'
 
     response: (response) ->
       if response is "true"

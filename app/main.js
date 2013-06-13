@@ -113,7 +113,11 @@ require(['backbone', 'cs!app'], function(Backbone, App){
     });
     // Instantiate the router
     var app_router = new AppRouter;
-    app_router.on('route:defaultRoute', function (actions) { console.log("any action", actions ); });
+    app_router.on('route:defaultRoute', function (actions) {
+
+
+     console.log("any action", actions ); });
+     app_router.navigate("help/troubleshooting", {trigger: true, replace: true});
     // Start Backbone history a necessary step for bookmarkable URL's
   window.app = new App;
   Backbone.history.start({
