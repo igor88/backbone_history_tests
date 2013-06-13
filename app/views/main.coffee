@@ -73,6 +73,8 @@ define [
       $(@el).html @template()
       @trigger 'rendered'
 
+      $("#btn_test").removeAttr("disabled")
+
     attach: ()->
       @$("form").ajaxForm
         beforeSubmit: =>
